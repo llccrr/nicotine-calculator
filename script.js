@@ -65,8 +65,5 @@ document.getElementById('calculator').addEventListener('submit', function(e) {
         `;
     }
 
-    // Ajouter des recommandations
-    resultText += `<br><br><em>Conseil :</em> Réduisez progressivement votre consommation de nicotine pour minimiser les effets de sevrage. Consultez un professionnel de santé pour un accompagnement personnalisé.`;
-
     document.getElementById('result').innerHTML = resultText;
 });

@@ -22,7 +22,7 @@
         </div>
         <div class="input-group">
             <label for="mlVape">
-                Quantité vapeée (ml) :
+                Taille de votre recharge (ml) :
                 <span class="info-icon" data-tooltip="Entrez la quantité totale de liquide e-cigarette que vous avez vapez en millilitres (ml).">
                         ℹ️
                     </span>
@@ -30,8 +30,17 @@
             <input type="number" id="mlVape" name="mlVape" min="0" step="0.1" required>
         </div>
         <div class="input-group">
+            <label for="temps">
+                Temps pour consommer votre recharge (semaines) :
+                <span class="info-icon" data-tooltip="Entrez le nombre de semaines sur lesquelles vous avez consommé la quantité de liquide vapeée. Cela permet de calculer votre rythme de consommation.">
+                        ℹ️
+                    </span>
+            </label>
+            <input type="number" id="temps" name="temps" min="0" step="0.1">
+        </div>
+        <div class="input-group">
             <label for="brand">
-                Marque de cigarette :
+                Marque de cigarette (optionnel) :
                 <span class="info-icon" data-tooltip="Sélectionnez la marque de cigarette traditionnelle que vous souhaitez utiliser comme référence pour le calcul. Chaque marque a un taux d'absorption de nicotine différent.">
                         ℹ️
                     </span>
@@ -46,19 +55,11 @@
                 <option value="1.3">Benson & Hedges (1.3 mg/cig)</option>
             </select>
         </div>
-        <div class="input-group">
-            <label for="temps">
-                Temps pour vider (semaines) :
-                <span class="info-icon" data-tooltip="Entrez le nombre de semaines sur lesquelles vous avez consommé la quantité de liquide vapeée. Cela permet de calculer votre rythme de consommation.">
-                        ℹ️
-                    </span>
-            </label>
-            <input type="number" id="temps" name="temps" min="0" step="0.1">
-        </div>
+
         <div class="input-group">
             <label for="absorption">
                 Facteur d'absorption (%) :
-                <span class="info-icon" data-tooltip="Le pourcentage de nicotine effectivement absorbée par votre organisme. Ce taux dépend principalement de la marque de votre cigarette électronique. La valeur par défaut est de 40%, mais vous pouvez l'ajuster selon vos préférences ou recommandations médicales.">
+                <span class="info-icon" data-tooltip="Le pourcentage de nicotine effectivement absorbée par votre organisme. Ce taux dépend principalement de la marque de votre cigarette électronique. La valeur par défaut est de 50%, mais vous pouvez l'ajuster selon votre vapoteuse.">
                         ℹ️
                     </span>
             </label>

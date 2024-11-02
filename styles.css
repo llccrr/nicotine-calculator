@@ -124,18 +124,17 @@ button:hover {
 /* Media Query pour les écrans de téléphone */
 @media (max-width: 600px) {
     .container {
-        padding: 15px 20px; /* Réduire le padding pour les petits écrans */
+        padding: 15px 10px; /* Réduire le padding pour les petits écrans */
         border-radius: 6px;  /* Ajuster le rayon des coins si nécessaire */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajuster l'ombre pour un aspect plus léger */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
         width: 100%; /* Utiliser 100% de la largeur de l'écran */
-        max-width: 100%; /* S'assurer que le max-width n'empêche pas l'adaptation */
+        max-width: 100%; /* S'assurer que le conteneur ne dépasse pas 100% */
+        margin: 0; /* Éliminer les marges si présentes */
     }
 
     h1 {
         font-size: 1.3em; /* Réduire la taille du titre pour les petits écrans */
-    }
-    body {
-        padding: 0;
+        text-align: center; /* Centrer le titre */
     }
 
     .input-group {
@@ -144,7 +143,7 @@ button:hover {
 
     input[type="number"],
     select {
-        padding: 6px; /* Réduire le padding des champs de saisie */
+        padding: 8px; /* Ajuster le padding des champs de saisie */
         font-size: 0.95em; /* Ajuster la taille de la police */
     }
 
@@ -159,12 +158,35 @@ button:hover {
     }
 
     .studies {
-        font-size: 0.8em; /* Réduire davantage la taille de la police pour les références */
+        font-size: 0.8em; /* Réduire la taille de la police pour les références */
     }
 
     /* Optionnel : Ajuster la taille des icônes d'information */
     .info-icon {
         font-size: 0.8em;
+    }
+
+    /* Assurer que tous les éléments internes n'excèdent pas la largeur */
+    body, html {
+        overflow-x: hidden; /* Empêcher le défilement horizontal */
+        width: 100%;
+    }
+
+    /* Ajustements supplémentaires si nécessaire */
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    body {
+        padding: 5px;
+        margin:0;
+    }
+    /* Assurer que les images ou autres médias sont responsives */
+    img, video {
+        max-width: 100%;
+        height: auto;
     }
 }
 
