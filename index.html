@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Équivalent Cigarettes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Convertisseur de Consommation E-Cigarette en Équivalent de Cigarettes Traditionnelles</h1>
+    <form id="calculator">
+
+        <div class="input-group">
+            <label for="nicotine">
+                Taux de nicotine (mg/ml) :
+                <span class="info-icon" data-tooltip="Entrez la concentration en nicotine de votre liquide e-cigarette en milligrammes par millilitre (mg/ml).">
+                        ℹ️
+                    </span>
+            </label>
+            <input type="number" id="nicotine" name="nicotine" min="0" step="0.1" required>
+        </div>
+        <div class="input-group">
+            <label for="mlVape">
+                Quantité vapeée (ml) :
+                <span class="info-icon" data-tooltip="Entrez la quantité totale de liquide e-cigarette que vous avez vapez en millilitres (ml).">
+                        ℹ️
+                    </span>
+            </label>
+            <input type="number" id="mlVape" name="mlVape" min="0" step="0.1" required>
+        </div>
+        <div class="input-group">
+            <label for="brand">
+                Marque de cigarette :
+                <span class="info-icon" data-tooltip="Sélectionnez la marque de cigarette traditionnelle que vous souhaitez utiliser comme référence pour le calcul. Chaque marque a un taux d'absorption de nicotine différent.">
+                        ℹ️
+                    </span>
+            </label>
+            <select id="brand" name="brand" required>
+                <option value="1.2" selected>Marlboro (1.2 mg/cig)</option>
+                <option value="1.3">Camel (1.3 mg/cig)</option>
+                <option value="1.1">Lucky Strike (1.1 mg/cig)</option>
+                <option value="1.25">Parliament (1.25 mg/cig)</option>
+                <option value="1.4">Newport (1.4 mg/cig)</option>
+                <option value="1.15">Gauloises (1.15 mg/cig)</option>
+                <option value="1.3">Benson & Hedges (1.3 mg/cig)</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <label for="temps">
+                Temps pour vider (semaines) :
+                <span class="info-icon" data-tooltip="Entrez le nombre de semaines sur lesquelles vous avez consommé la quantité de liquide vapeée. Cela permet de calculer votre rythme de consommation.">
+                        ℹ️
+                    </span>
+            </label>
+            <input type="number" id="temps" name="temps" min="0" step="0.1">
+        </div>
+        <div class="input-group">
+            <label for="absorption">
+                Facteur d'absorption (%) :
+                <span class="info-icon" data-tooltip="Le pourcentage de nicotine effectivement absorbée par votre organisme. Ce taux dépend principalement de la marque de votre cigarette électronique. La valeur par défaut est de 40%, mais vous pouvez l'ajuster selon vos préférences ou recommandations médicales.">
+                        ℹ️
+                    </span>
+            </label>
+            <input type="number" id="absorption" name="absorption" min="0" max="100" value="50">
+            <small>Valeur par défaut : 50%</small>
+        </div>
+        <button type="submit">Calculer</button>
+    </form>
+    <div id="result">
+        <!-- Les résultats seront affichés ici -->
+    </div>
+    <div class="studies">
+        <h2>Références Scientifiques</h2>
+        <ul>
+            <li>Benowitz, N. L. (2010). Nicotine addiction. <em>The New England Journal of Medicine</em>.</li>
+            <li>Grana, R., Benowitz, N., & Glantz, S. A. (2014). E-cigarettes: a scientific review. <em>Circulation</em>.</li>
+            <li>Breland, A., Bullen, C., Kee, C., & Hajek, P. (2014). Nicotine replacement therapy and electronic cigarettes: potential to help people stop smoking. <em>Nicotine & Tobacco Research</em>.</li>
+            <li>Farsalinos, K. E., & Polosa, R. (2014). Safety evaluation and risk assessment of electronic cigarettes as tobacco cigarette substitutes: a systematic review. <em>Therapeutic Advances in Drug Safety</em>.</li>
+        </ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
