@@ -1,6 +1,13 @@
+document.getElementById('calculate-btn').addEventListener('click', function() {
+    // Tracking de l'événement
+    gtag('event', 'custom_calculate_click', {
+        'event_category': 'Button',
+        'event_label': 'calculateButton',
+        'value': 1
+    });
+})
 document.getElementById('calculator').addEventListener('submit', function(e) {
     e.preventDefault();
-
     // Récupérer les valeurs des entrées
     const mlVape = parseFloat(document.getElementById('mlVape').value);
     const nicotine = parseFloat(document.getElementById('nicotine').value);

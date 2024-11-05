@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utilisez notre convertisseur pour transformer votre consommation d'e-cigarette en équivalent de cigarettes traditionnelles. Suivez vos progrès et réduisez votre dépendance à la nicotine.">
+    <meta name="keywords" content="convertisseur nicotine, calculateur e-cigarette, équivalent cigarette, sevrage nicotine, réduction consommation nicotine, vapoteuse">
+<!--    <link rel="canonical" href="nicotine-calculator.vercel.app">-->
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
     <title>Calculateur Cigarettes/Vapoteuses</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCNEKM1LJL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PCNEKM1LJL');
+    </script>
 </head>
 <body>
 <div class="container">
@@ -66,7 +79,7 @@
             <input type="number" id="absorption" name="absorption" min="0" max="100" value="50">
             <small>Valeur par défaut : 50%</small>
         </div>
-        <button type="submit">Calculer</button>
+        <button id="calculate-btn" type="submit">Calculer</button>
     </form>
     <div id="result">
         <!-- Les résultats seront affichés ici -->
